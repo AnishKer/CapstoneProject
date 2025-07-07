@@ -15,13 +15,14 @@ Notebook Environment: Google Colab
 
 The following diagram illustrates the overall architecture and data flow of the project.
 
-graph TD;
-    A[Data Collection] --> B[Data Preprocessing & Cleaning];
-    B --> C[Exploratory Data Analysis (EDA)];
-    C --> D[Feature Engineering];
-    D --> E[Model Training & Hyperparameter Tuning];
-    E --> F[Model Evaluation];
-    F --> G[Results Visualization & Reporting];
+graph TD
+    A["Data Collection"] --> B["Data Preprocessing & Cleaning"];
+    B["Data Preprocessing & Cleaning"] --> C["Exploratory Data Analysis (EDA)"];
+    C["Exploratory Data Analysis (EDA)"] --> D["Feature Engineering"];
+    D["Feature Engineering"] --> E["Model Training & Hyperparameter Tuning"];
+    E["Model Training & Hyperparameter Tuning"] --> F["Model Evaluation"];
+    F["Model Evaluation"] --> G["Results Visualization & Reporting"];
+
 
 
 
