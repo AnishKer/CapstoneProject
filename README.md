@@ -1,7 +1,7 @@
-#Capstone Project
+# Capstone Project
 This project addresses the problem of inefficient urban parking utilization caused by static pricing models. Traditional fixed-price systems often lead to parking lots being either overcrowded during peak hours or underused during off-peak times. The main goal of this project was to design and implement an intelligent, data-driven pricing engine for 14 urban parking spaces that dynamically adjusts prices in real time. The key outcome is a complete, end-to-end simulation that ingests streaming parking data, processes it through three custom-built pricing models of increasing complexity, and provides live visualizations of the resulting price changes, demonstrating a smooth, logical, and explainable pricing strategy based on demand and competition.
 
-#Tech Stack
+# Tech Stack
 The primary technologies, frameworks, and libraries used to build this project are listed below.
 
 Programming Language: Python
@@ -28,7 +28,7 @@ F --> G[Results Visualization & Reporting];
 
 This section provides a detailed explanation of the project's structure and the steps involved from start to finish.
 
-1.** Data Collection**
+1.** Data Collection **
 The data for this project was provided as a single CSV file named dataset.csv as part of the "Dynamic Pricing for Urban Parking Lots" capstone project requirements. This dataset is not publicly available and was created specifically for this project. It contains simulated data capturing the state of 14 distinct urban parking spaces over a period of 73 days. For each day, data was sampled at 18 different time points, creating a comprehensive time-series dataset ideal for analyzing demand fluctuations.
 
 2.** Data Preprocessing & Cleaning**
