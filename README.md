@@ -29,10 +29,10 @@ graph TD;
 
 This section provides a detailed explanation of the project's structure and the steps involved from start to finish.
 
-1.** Data Collection **
+1.**Data Collection**
 The data for this project was provided as a single CSV file named dataset.csv as part of the "Dynamic Pricing for Urban Parking Lots" capstone project requirements. This dataset is not publicly available and was created specifically for this project. It contains simulated data capturing the state of 14 distinct urban parking spaces over a period of 73 days. For each day, data was sampled at 18 different time points, creating a comprehensive time-series dataset ideal for analyzing demand fluctuations.
 
-2.** Data Preprocessing & Cleaning**
+2.**Data Preprocessing & Cleaning**
 The data was prepared for analysis through a multi-step preprocessing and cleaning pipeline implemented in Python using the Pandas library. The key steps were:
 
 Handling Missing Values: The dataset was first inspected for any missing data points in its columns. The strategy adopted was to fill any numerical missing values with the mean of their respective columns to preserve the dataset's size and statistical properties.
@@ -43,7 +43,7 @@ Removing Duplicates: The dataset was scanned for any duplicate rows, and all suc
 
 Header Cleaning: To ensure compatibility with the Pathway real-time processing framework, the column headers in the CSV file were cleaned. This involved replacing spaces with underscores (e.g., changing 'Queue length' to Queue_length). This one-time preprocessing step created a new file, dataset_cleaned.csv, which was used for the simulation phase.
 
-3.** Exploratory Data Analysis (EDA)**
+3.**Exploratory Data Analysis (EDA)**
 The analysis of the dataset began with an exploratory phase focused on understanding its structure and content. Using Pandas functions like info(), head(), and isnull().sum(), an initial assessment of the data was performed. This revealed the data types of each column, the presence of any missing values, and the overall shape of the dataset. The primary goal of this EDA was to verify data quality and identify the necessary preprocessing steps. The analysis confirmed the presence of key features required for the pricing models, including Occupancy, Capacity, Queue_length, Traffic, Latitude, and Longitude, which formed the basis for subsequent feature engineering and model development.
 
 4. **Feature Engineering**
@@ -59,7 +59,7 @@ Feature Normalization: Numerical features like Queue length and Traffic were sca
 
 Location ID: A unique numerical ID was assigned to each of the 14 parking lots based on their latitude and longitude. This allowed for the independent application of pricing logic to each location.
 
-5.** Model Training & Evaluation**
+5.**Model Training & Evaluation**
 In line with the project's constraints, three distinct pricing models were developed from scratch using only Python, NumPy, and Pandas. Evaluation was qualitative, focusing on creating smooth, explainable, and logical price fluctuations rather than using traditional quantitative metrics.
 
 Model 1: Baseline Linear Model: A simple iterative model was implemented using the formula: Price(t+1) = Price(t) + α * (Occupancy_Rate). This model served as a basic reference point, adjusting the price based solely on how full the lot was.
@@ -68,7 +68,7 @@ Model 2: Demand-Based Price Function: A more sophisticated model was built aroun
 
 Model 3: Competitive Pricing Model: This optional model added geographic intelligence. It first calculated a distance matrix for all parking lots using the Haversine formula to identify the nearest competitor for each lot. It then adjusted the price from Model 2 based on the competitor's price and the lot's current occupancy, simulating a competitive market environment.
 
-6.** Results Visualization & Reporting**
+6.**Results Visualization & Reporting**
 The final results were demonstrated through a real-time simulation and live visualization, fulfilling the core requirements of the project.
 
 Real-Time Simulation: The pricing models were integrated into a real-time data pipeline using the Pathway framework. A User-Defined Function (@pw.udf) was created to apply the demand-based pricing logic to a simulated stream of data from the cleaned CSV file. This setup continuously processed incoming data and wrote the original features along with the calculated price to an output CSV file.
@@ -101,4 +101,4 @@ Ensure you have Python 3.8+ and `pip` installed on your system.
     ```
 
 2.  **Open and run the notebook:**
-    Navigate to the project notebook (e.g., `IITGsummer.ipynb`) and load the dataset.csv file and then run the cells sequentially to reproduce the analysis and results.
+    Navigate to the project notebook (e.g., `IITGsummer.ipynb`) and load the dataset.csv file, then run the cells sequentially to reproduce the analysis and results.
