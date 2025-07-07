@@ -11,21 +11,6 @@ Data Visualization: Bokeh
 Machine Learning: All models were built from scratch using only NumPy and Pandas, with no external machine learning libraries used, as per the project requirements.
 Notebook Environment: Google Colab
 
-## Architecture Diagram
-
-The following diagram illustrates the overall architecture and data flow of the project.
-
-graph TD
-    A["Data Collection"] --> B["Data Preprocessing & Cleaning"];
-    B["Data Preprocessing & Cleaning"] --> C["Exploratory Data Analysis (EDA)"];
-    C["Exploratory Data Analysis (EDA)"] --> D["Feature Engineering"];
-    D["Feature Engineering"] --> E["Model Training & Hyperparameter Tuning"];
-    E["Model Training & Hyperparameter Tuning"] --> F["Model Evaluation"];
-    F["Model Evaluation"] --> G["Results Visualization & Reporting"];
-
-
-
-
 ## Project Architecture and Workflow
 
 This section provides a detailed explanation of the project's structure and the steps involved from start to finish.
